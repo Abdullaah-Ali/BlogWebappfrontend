@@ -31,8 +31,8 @@
   color: #f1356d;
 }
 .content {
-  max-width: 600px;
-  margin: 40px auto;
+  max-width: 578px;
+  margin: 19px auto;
   padding: 20px;
 }
 
@@ -49,4 +49,112 @@
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 8px;
+}
+
+.Form-signup {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  padding: 55px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Form-signup h2 {
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.Form-signup h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 28px;
+  border-radius: 12px;
+  background: #4070f4;
+}
+
+.Form-signup form {
+  margin-top: 30px;
+}
+
+.Form-signup .form-group {
+  height: 52px;
+  margin: 18px 0;
+}
+
+.Form-signup input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #c7bebe;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.Form-signup input:focus,
+.Form-signup input:valid {
+  border-color: #030202;
+}
+
+.Form-signup button {
+  height: 52px;
+  width: 93%;
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #4070f4;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.Form-signup button:hover {
+  background: #0e4bf1;
+}
+
+.Form-signup .error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.Form-signup .policy {
+  display: flex;
+  align-items: center;
+}
+
+.Form-signup h3 {
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.Form-signup .text h3 {
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+
+.Form-signup .text h3 a {
+  color: #4070f4;
+  text-decoration: none;
+}
+
+.Form-signup .text h3 a:hover {
+  text-decoration: underline;
+}
+.InfoMore {
+  font-weight: bold;
+  margin: 12px;
 }

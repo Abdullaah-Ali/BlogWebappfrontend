@@ -53,29 +53,33 @@ const Signup = () => {
     };
 
     return (
-        <div className="Form-signup">
-            <h2>Signup Form</h2>
-            <form onSubmit={handleSubmit}>
-                {error && <p className="error-message">{error}</p>} {/* Display error message if there is one */}
-                <div className="form-group">
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="password">Password:</label>
-                    <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="confirm_password">Confirm Password:</label>
-                    <input type="password" id="confirm_password" name="confirm_password" value={formData.confirm_password} onChange={handleChange} />
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+<div className="Form-signup">
+    <h2>Registration Form</h2>
+    <form onSubmit={handleSubmit}>
+        {error && <p className="error-message">{error}</p>} {/* Display error message if there is one */}
+        <div className="form-group">
+            <input type="text"placeholder='Add Your Name' id="name" name="name" value={formData.name} onChange={handleChange} />
         </div>
+        <div className="form-group">
+            
+            <input type="email" placeholder='Add Your Email' id="email" name="email" value={formData.email} onChange={handleChange} />
+        </div>
+        <div className="form-group">
+            <input type="password" placeholder = 'Add Your password ' id="password" name="password" value={formData.password} onChange={handleChange} />
+        </div>
+        <div className="form-group">
+            <input type="password" placeholder = 'Confirm Your password ' id="confirm_password" name="confirm_password" value={formData.confirm_password} onChange={handleChange} />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="additional-info">
+        <p className='InfoMore'>Already Registered? Head to <a href="http://localhost:3000/login">Login page</a></p>
+        <p>For any inquiries, please contact us at <a href="mailto:info@example.com">abdullahaliquadri@gmail.com</a></p>
+
+    </div>
+
+</div>
+
     );
 }
 
