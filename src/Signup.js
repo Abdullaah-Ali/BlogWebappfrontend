@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
+
 
 const Signup = () => {
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         password: '',
         confirm_password: ''
     });
+    const navigate = useNavigate(); // Use useNavigate instead of useHistory
 
     const [error, setError] = useState(null); // State to hold error messages
 
@@ -33,13 +37,17 @@ const Signup = () => {
 
         try {
             const response = await axios.post('http://localhost:5000/signup', formData);
-            console.log('Form submission successful:', response);
-            console.log(formData)
+//            console.log('Form submission successful:', response);
+//          console.log(formData)
+            navigate('/signup/otp-verify'); // Use absolute path
+
+//            console.log ("new page redirecting now  ")
+
         } catch (error) {
             if (error.response) {
                 // The request was made and the server responded with a status code that falls out of the range of 2xx
                 setError('Server error. Please try again later.');
-                console.error('Server Error:', error.response.data);
+                console.error(' Server Error:', error.response.data);
             } else if (error.request) {
                 // The request was made but no response was received
                 setError('No response from server. Please check your connection.');
@@ -51,6 +59,7 @@ const Signup = () => {
             }
         }
     };
+ 
 
     return (
 <div className="Form-signup">
@@ -75,7 +84,7 @@ const Signup = () => {
     <div class="additional-info">
         <p className='InfoMore'>Already Registered? Head to <a href="http://localhost:3000/login">Login page</a></p>
         <p>For any inquiries, please contact us at <a href="mailto:info@example.com">abdullahaliquadri@gmail.com</a></p>
-
+  
     </div>
 
 </div>

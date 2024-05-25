@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Home from './home';
 import Login from './Login';
 import Signup from './Signup';
+import Otpver from './Otpver';
 
 
 function App() {
@@ -22,12 +23,14 @@ function App() {
     <Route path = "/" element = { <Home/>}/>
     <Route path = "/login" element = { <Login/>}/>
     <Route path = "/signup" element = { <Signup/>}/>
+    <Route path = "/signup/otp-verify" element = { <Otpver/>}/>
 
 
     </Routes>
     
     <home/>
     </div>
+    
     </div>
 
 </Router>
