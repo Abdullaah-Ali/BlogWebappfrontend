@@ -1,18 +1,31 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; 
+
 
 const Otpver = () => {
     const [formOtp, setFormOtp] = useState('');
     const [error, setError] = useState(null); // State to hold error messages
+    const navigate = useNavigate(); // Use useNavigate instead of useHistory
 
     const handleChange = (e) => {
         setFormOtp(e.target.value);
     };
-
+    axios.defaults.withCredentials = true;
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/signup/otp-verify', { otp: formOtp });
+         const response = await axios.post('http://localhost:5000/signup/otp-verify', { otp: formOtp }, { withCredentials: true, });
+
+
+         // Check if the response contains the redirectTo property
+         if (response.data.redirectTo) {
+            // Redirect to the specified route
+            navigate(response.data.redirectTo);
+        } else {
+           
+        }
+
             console.log('OTP verification successful:', response.data);
             // You can navigate to the login page or show a success message here
         } catch (error) {

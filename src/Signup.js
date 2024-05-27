@@ -36,12 +36,15 @@ const Signup = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/signup', formData);
-//            console.log('Form submission successful:', response);
-//          console.log(formData)
-            navigate('/signup/otp-verify'); // Use absolute path
+            const response = await axios.post('http://localhost:5000/signup', formData, { withCredentials: true });
 
-//            console.log ("new page redirecting now  ")
+            // Check if the response contains the redirectTo property
+            if (response.data.redirectTo) {
+                // Redirect to the specified route
+                navigate(response.data.redirectTo);
+            } else {
+                // Handle other scenarios if needed
+            }
 
         } catch (error) {
             if (error.response) {
