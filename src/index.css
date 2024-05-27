@@ -158,3 +158,71 @@
   font-weight: bold;
   margin: 12px;
 }
+
+
+/* login page css  */
+
+.LoginFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.LoginForm {
+  max-width: 365px;
+  width: 100%;
+  padding: 55px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.LoginFormTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+}
+
+.LoginFormTitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 3px;
+  width: 28px;
+  border-radius: 12px;
+  background: #4070f4; /* Theme color */
+}
+
+.LoginFormField {
+  margin-top: 30px;
+}
+
+.LoginFormLabel {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.LoginFormInput {
+  height: 40px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 17px;
+  border: 1.5px solid #c7bebe;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.LoginFormInput:focus {
+  border-color: #4070f4; /* Theme color */
+}
+
+.LoginFormButton {
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #4070f4; /* Theme color */
+}
