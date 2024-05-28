@@ -1,3 +1,4 @@
+import Logout from './Logout';
 const Navbar = () => {
     return ( 
         <nav className= " navbar">
@@ -6,9 +7,9 @@ const Navbar = () => {
             <a href = "/">Home</a>
             <a href = "/login"> Login</a>
             <a href = "/signup"> Signup</a>
-            <a href = "/logout"> Logout</a>
+            <Logout />
             <a href= " /profile-edit"> Profile</a>
-            <a href =  " /create ">  Create Your Blog</a>
+            <a href =  " /create-blog ">  Create Your Blog</a>
             </div>
 
 

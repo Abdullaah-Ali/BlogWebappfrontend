@@ -226,3 +226,17 @@
   color: #fff;
   background-color: #4070f4; /* Theme color */
 }
+
+.logout-button {
+  background-color: transparent; /* Make background transparent */
+  border: none; /* Remove border */
+  color: #333; /* Set color */
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif; /* Apply the same font */
+  margin-left: 16px; /* Add margin-left */
+  padding: 6px; /* Add padding */
+  font-size: 16px; /* Increase font size */
+
+}
+
