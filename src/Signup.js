@@ -28,8 +28,8 @@ const Signup = () => {
         if (!formData.name || !formData.email || !formData.password || !formData.confirm_password) {
             setError('Please fill in all fields.');
             return;
-        }
-
+        }   
+        
         if (formData.password !== formData.confirm_password) {
             setError('Passwords do not match.');
             return;

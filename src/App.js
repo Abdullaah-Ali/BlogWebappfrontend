@@ -8,7 +8,9 @@ import Login from './Login';
 import Signup from './Signup';
 import Otpver from './Otpver';
 import PageNotFound from './PageNotFound';
-import CreateBlog from './CreateBlog';
+import CreateBlog  from './CreateBlog';
+import DisplayBlog from './DisplayBlog'; // Adjust the path if necessary
+
 
 function App() {
 
@@ -26,8 +28,9 @@ function App() {
     <Route path = "/signup" element = { <Signup/>}/>
     <Route path = "/signup/otp-verify" element = { <Otpver/>}/>
     <Route path="*" element={<PageNotFound />} />
-    <Route path = "/create-blog" element={<CreateBlog />}/>
-
+    <Route path = "/create-blog" element={<CreateBlog />} />
+    <Route path="/blogs/:title" element={<DisplayBlog />} />
+   
 
 
     </Routes>
