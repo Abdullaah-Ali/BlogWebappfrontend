@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-
+import formattedDate from './CreateBlog'
 const DisplayBlog = () => {
   const { title } = useParams(); // Extract title from URL params
   const [blog, setBlog] = useState(null);
@@ -41,12 +41,17 @@ const DisplayBlog = () => {
   }
 
   return (
-    <div>
-      <h1>{blog.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: blog.content }}></div>
-      <p>{new Date(blog.createdat).toLocaleDateString()}</p>
-    </div>
-  );
+<div class="blog-preview">
+  <h2>{blog.title}</h2>
+  <div dangerouslySetInnerHTML={{ __html: blog.content }}></div>
+  <div class="blog-info">
+    <p class="author">Author: {blog.author}</p>
+    <p class="date">Published: { formattedDate }</p>
+    
+    <p class="read-time"> mins</p>
+  </div>
+</div>
+  )
 };
 
 export default DisplayBlog;
