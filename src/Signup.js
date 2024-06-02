@@ -36,7 +36,12 @@ const Signup = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/signup', formData, { withCredentials: true });
+            const response = await axios.post('http://localhost:5000/signup', formData, {
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                withCredentials: true 
+              });
 
             // Check if the response contains the redirectTo property
             if (response.data.redirectTo) {

@@ -10,7 +10,7 @@ import Otpver from './Otpver';
 import PageNotFound from './PageNotFound';
 import CreateBlog  from './CreateBlog';
 import DisplayBlog from './DisplayBlog'; // Adjust the path if necessary
-
+import Profile from './Profile'
 
 function App() {
 
@@ -30,6 +30,7 @@ function App() {
     <Route path="*" element={<PageNotFound />} />
     <Route path = "/create-blog" element={<CreateBlog />} />
     <Route path="/blogs/:title" element={<DisplayBlog />} />
+    <Route path = "/profile" element = { <Profile />}/>
    
 
 

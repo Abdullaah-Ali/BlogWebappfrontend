@@ -13,6 +13,7 @@ const Home = () => {
         const res = await axios.get('http://localhost:5000', {
           withCredentials: true
         });
+        console.log('Fetched blogs:', res.data);  // Debugging log
         setBlogs(res.data);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -25,12 +26,22 @@ const Home = () => {
     fetchData();
   }, []);
 
+  // Function to format date as day month year
+  const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
 
   if (error) {
     return <div>Error: {error}</div>;
+  }
+
+  if (!blogs || blogs.length === 0) {
+    return <div>No blogs found.</div>;
   }
 
   return (
@@ -42,8 +53,10 @@ const Home = () => {
             <Link to={`/blogs/${encodeURIComponent(blog.title)}`}>
               <h2>{blog.title}</h2>
             </Link>
-            <p>Written by {blog.author}</p>
+
             <p>{blog.description}</p>
+            <p>Written by {blog.author}</p>
+            <p>Publish At {formatDate(blog.createdat)}</p> {/* Format date here */}
           </div>
         ))}
       </div>

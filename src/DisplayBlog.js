@@ -45,7 +45,7 @@ const DisplayBlog = () => {
   <h2>{blog.title}</h2>
   <div dangerouslySetInnerHTML={{ __html: blog.content }}></div>
   <div class="blog-info">
-    <p class="author">Author: {blog.author}</p>
+    <p className="author">Author: {blog.author}</p>
     <p class="date">Published: { formattedDate }</p>
     
     <p class="read-time"> mins</p>
