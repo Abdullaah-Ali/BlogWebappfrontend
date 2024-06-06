@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+    --> Authentication
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    Features: Login, signup, and logout using JWT (JSON Web Token).
+    Implementation: Used libraries like jsonwebtoken for JWT and frameworks like Express.js for handling authentication.
+    -->Blog Management
 
-## Available Scripts
+    Features: Create, view, and display blogs with pagination.
+    Implementation: Used a combination of MongoDB for database management and Express.js for handling backend logic. React.js can handle the frontend, and pagination can be managed using libraries like react-paginate.
 
-In the project directory, you can run:
+    -->Profile Management
 
-### `npm start`
+    Features: View , create and edit user profiles.
+    Implementation: Created user profile schemas in MongoDB and use React forms for profile editing interfaces and creating profiles and editing it .
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    
+    -->Added Rich Text Editor (TinyMCE)
+    
+    Purpose: Allow users to create and edit blog posts with rich text formatting (bold, italics, lists, links, images, etc.).
+    
+    -->AI and ML Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Spell Check
+    Implementation: Integrated existing spell checker for the in rich text editor.
+    
+    -->Content Summarization
+    Implementation: Used pre-trained models for text summarization such as spaCy and different tokenizatation and parssing method to provide a summarized content for users
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    -->SEO Tags with NLP
+    Implementation: Used NLP models to analyze content and generate SEO-friendly tags. Libraries like spaCy, NLTK were used
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
